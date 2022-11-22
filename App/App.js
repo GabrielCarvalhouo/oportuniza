@@ -10,6 +10,7 @@ import Routes from './src/screens/Routes';
 import Login from './src/screens/Login';
 import RegisterUser from './src/screens/RegisterUser';
 import ValidateToken from './src/screens/ValidateToken';
+import Home from './src/screens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }} >
         {state.Loading ? (
-          <Stack.Screen name="ValidateToken" component={ValidateToken} />
+          <Stack.Screen name="ValidateToken" component={Home} />
         ) : (
           state.isLogged ? (
             <>
